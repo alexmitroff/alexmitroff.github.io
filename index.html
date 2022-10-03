@@ -15,6 +15,7 @@
                    "Helvetica Neue", sans-serif;
       font-size: 16px;
       height: 100%;
+      color: hsl(0, 0%, 15%);
       background-color: hsl(0, 0%, 75%);
     }
     body {
@@ -25,9 +26,9 @@
       align-items: center;
     }
     header{
-      height: 2rem;
-      padding: .2rem;
+      padding: .5rem;
       width: 100%;
+      background-color: hsl(0, 0%, 15%);
     }
     main {
       flex-grow: 1;
@@ -47,6 +48,9 @@
     h2{
       margin: 1rem 0 .5rem 0;
     }
+    h3{
+      margin: .75rem 0 .45rem 0;
+    }
     ul{
       list-style-type: none;
     }
@@ -58,15 +62,38 @@
       padding: .5rem 1rem;
       vertical-align: top;
     }
-
-    .mb
-    {
+    .mb {
       margin-bottom: .5rem;
+    }
+    nav > ul{
+      display:flex;
+      flex-wrap: wrap;
+    }
+    nav > ul > li {
+      padding: .2rem .5rem;
+    }
+    header > nav a {
+      text-decoration: none;
+      color: hsl(0, 0%, 75%);
+    }
+    header > nav a:hover {
+      color: hsl(0, 0%, 50%);
     }
   </style>
 </head>
 <body>
-  <header></header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/"><b>alexmitroff.github.io</b></a></li>
+        <li><a href="#id_personal_info">Personal info</a></li>
+        <li><a href="#id_education">Education</a></li>
+        <li><a href="#id_tech_skills">Skills</a></li>
+        <li><a href="#id_projects">Projects</a></li>
+        <li><a href="#id_exp">Working expirience</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <section id="id_personal_info">
       <h2>Personal info</h2>
@@ -87,33 +114,27 @@
     </section>
     <section id="id_education">
       <h2>Education</h2>
-      <table>
-        <tr>
-          <td>2010&nbsp;&ndash;&nbsp;2012</td>
-          <td>
-            <ul>
-              <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
-              <li>Engineering Graphics and Design</li>
-              <li class="mb"><b>Masters Degree Applied Information Technologies</b></li>
-              <li>Modules included: 3D animation, Post production and Compositing,
-              Java programming, 3D graphics programming.</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>2006&nbsp;&ndash;&nbsp;2010</td>
-          <td>
-            <ul>
-              <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
-              <li>Engineering Graphics and Design</li>
-              <li class="mb"><b>Bachelor Degree Applied Information Technologies</b></li>
-              <li>Modules included: 3D modeling and animation, Database
-              engineering, Interactive multimedia development, Networking, OS
-              and telecommunication engineering, Object-oriented programming.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
+      <h3>2010&nbsp;&ndash;&nbsp;2012</h3>
+      <div>
+        <ul>
+          <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
+          <li>Engineering Graphics and Design</li>
+          <li class="mb"><b>Masters Degree Applied Information Technologies</b></li>
+          <li>Modules included: 3D animation, Post production and Compositing,
+          Java programming, 3D graphics programming.</li>
+        </ul>
+      </div>
+      <h3>2006&nbsp;&ndash;&nbsp;2010</h3>
+      <div>
+        <ul>
+          <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
+          <li>Engineering Graphics and Design</li>
+          <li class="mb"><b>Bachelor Degree Applied Information Technologies</b></li>
+          <li>Modules included: 3D modeling and animation, Database
+          engineering, Interactive multimedia development, Networking, OS
+          and telecommunication engineering, Object-oriented programming.</li>
+        </ul>
+      </div>
     </section>
     <section id="id_tech_skills">
       <h2>Technical skills</h2>
@@ -129,56 +150,105 @@
     <section id="id_projects">
       <h2>Projects</h2>
       <ul class="list">
-        <li><b>5minutemondays.com</b> A platform for online OSHA trainings. Clinet registration, integration with Stripe payment service, integration with AWS SMS, 
+        <li class="mb"><b>5minutemondays.com</b> A platform for online OSHA trainings. Clinet registration, integration with Stripe payment service, integration with AWS SMS, 
           integration with Vimeo, generating posttraining reports as PDF. Django, django rest framework, postgresql, gUnicorn, fabric for CI/CD.</li>
 
-        <li><b>magistra-school.ru</b> A platform for massage school.
+        <li class="mb"><b>magistra-school.ru</b> A platform for massage school.
         Schedule, student regstration, application to courses, integration with payment services,
         integration with Vimeo(online course storage during COVID-19 lockdown). Django, django rest framework, postgresql, gUnicorn, docker</li>
 
-        <li><b>3D visualization for track driver training system.</b> Visualization of terain with 4 different tracks.
+        <li class="mb"><b>3D visualization for track driver training system.</b> Visualization of terain with 4 different tracks.
           A suspention calculations for a hexopod platform, intagration with rest of the training system written in Delphi. Unity, C#</li>
         
-        <li><b>3D visualization for SA-15 "Gauntlet" crew training system.</b> Software for presentation training system on expo.
+        <li class="mb"><b>3D visualization for SA-15 "Gauntlet" crew training system.</b> Software for presentation training system on expo.
           Unity, C#, intagration with training system written on Delphi</li>
 
-        <li><b>amlab.me</b> A platform for online photo school. student regstration, application to courses, integration with payment services,
+        <li class="mb"><b>amlab.me</b> A platform for online photo school. student regstration, application to courses, integration with payment services,
           integration with Vimeo. Django, django rest framework, postgresql, gUnicorn, fabric for CI/CD.</li>
         
-        <li><b>Tempus Project 544083, Helsinki, Finland.</b> Participated in the development
+        <li class="mb"><b>Tempus Project 544083, Helsinki, Finland.</b> Participated in the development
         of a web platform that would work for International Masters Program.</li>
         
-        <li><b>Extended project (part of Masters Degree exchange project to
+        <li class="mb"><b>Extended project (part of Masters Degree exchange project to
         Kymenlaakson ammattikorkeakoulu, University of Applied Sciences,
         Finland).</b> Group music video project. Visual effects supervisor during
         production. I did procedural 3d animations and postpoduction
         compositing.</li>
 
-        <li><b>Faster Bot (unuavailable).</b> Service for 3D prining. Designing UI and frontend markuping
+        <li class="mb"><b>Faster Bot (unuavailable).</b> Service for 3D prining. Designing UI and frontend markuping
         (HTML5, Bootstrap, fullPage.js). Backend Linux server and database
         administration. Django, PostgreSQL, mathplotlib, uWSGI.</li>
         
-        <li><b>le-genepi.com (unavailable).</b> A platform for online cosmetic store. Frontend markuping (HTML5,
+        <li class="mb"><b>le-genepi.com (unavailable).</b> A platform for online cosmetic store. Frontend markuping (HTML5,
         Bootstrap, jQuery) based on a given design for a cosmetics brand. Backend
         Linux server and database administration. Django, PostgreSQL, uWSGI.</li>
         
-        <li><b>Bridge Superstructure On-line Monitoring Windows Desktop Application.</b>
+        <li class="mb"><b>Bridge Superstructure On-line Monitoring Windows Desktop Application.</b>
         A project commissioned by government for bridge security system. It should be used of Sochi Olympics in 2014.
         There were a destributed team of software enginers. Each one of them did a part of this project.
         I integrated all these peaces into final working application. Delphi.</li>
         
-        <li><b>Unified Tracking System for Traffic Accidents (web application).</b> Marking up
+        <li class="mb"><b>Unified Tracking System for Traffic Accidents (web application).</b> Marking up
         UI using Metro UI CSS. Developing different pages for each type of
         transportation.</li>
         
-        <li><b>Interactive Army Shooting Range Monitoring (cross-platform desktop
-        application).</b> Creating the software for application.</li>
+        <li class="mb"><b>Interactive Army Shooting Range Monitoring (cross-platform desktop
+        application).</b> Creating the software for application. FreePascal, Lazarus</li>
         
-        <li><b>Extended project (part of Masters Degree): 'Design and Development of
+        <li class="mb"><b>Extended project (part of Masters Degree): 'Design and Development of
         Transport and Load Vehicle Simulator Prototype'.</b> Delphi, OpenGL, Python,
         OpenCV. The project was showcased during 2011 International Aviation and
         Space Salon MAKS.</li>
       </ul>
+    </section>    
+    <section id="id_exp">
+      <h2>Work expirience</h2>
+      <h3>February 2020 -
+        until now</h3>
+      <div>
+        <b>Unity C# developer at "NTC-KT "TOR"</b>
+      </div>
+      <h3>August 2019 -
+        February 2020</h3>
+      <div>
+        <b>Freelance</b>
+      </div>
+      <h3>December 2018 -
+        August 2019</h3>
+      <div>
+        <b>Backend developer at amlab.me</b>
+      </div>      
+      <h3>September 2015 -
+        December 2018</h3>
+      <div>
+        <b>Tutor/Lecturer of Department of Engineering Graphics and
+          Design, Peter the Great St. Petersburg Polytechnic
+          University</b>
+          <p>Tutoring and lecturing in UI/UX (website development, IT
+          development pipelines), Interactive media design, A.I. and 3D
+          graphics (modeling, texturing rigging, animation, using game
+          engine and rendering).</p>
+          <p>Creating teaching programmes, planning and preparing for
+          lectures, monitoring and leading Master and Bachelor degrees’
+          final projects. Holding additional lectures in commercial
+          printing and prepress technologies for students in advertising.</p>
+          <p>Skills: attention to detail, communicating, idea presenting,
+          tutoring, monitoring projects, problem solving and working
+          (and helping others work) to deadlines.</p>
+      </div>
+      <h3>February 2012 -
+        September 2015</h3>
+      <div>
+        <b>Assistant Professor of Department of Engineering Graphics
+        and Design, Peter the Great St. Petersburg Polytechnic
+        University</b>
+        <p>Tutoring and lecturing in UI/UX (website development, IT
+        development pipelines) and 3D graphics (modeling, texturing
+        rigging, animation, using game engine and rendering).
+        Organizing student projects.</p>
+        <p>Creating teaching programmes, planning and preparing for
+        lectures, monitoring Bachelor degrees final projects.</p>
+      </div>
     </section>
   </main>
   <footer></footer>
