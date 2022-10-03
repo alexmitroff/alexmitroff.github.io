@@ -2,30 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Alexmitroff github home page </title>
+  <title>Aleksei Mitrofanov</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html {
       font-family: -apple-system, BlinkMacSystemFont,
                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
                    "Helvetica Neue", sans-serif;
       font-size: 16px;
+      height: 100%;
+      background-color: hsl(0, 0%, 75%);
     }
-
     body {
+      height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
+      align-items: center;
+    }
+    header{
+      height: 2rem;
+      padding: .2rem;
+      width: 100%;
     }
     main {
       flex-grow: 1;
+      max-width: 1024px;
+      width: 100%;
+      padding: 1rem;
+    }
+    main > section {
+      margin-bottom: 2rem;
+    }
+    main > section:last-child{
+      margin-bottom: 0;
     }
     footer {
       background-color: hsl(0, 0%, 15%);
+    }
+    h2{
+      margin: 1rem 0 .5rem 0;
+    }
+    ul{
+      list-style-type: none;
+    }
+    ul.list{
+      list-style-type: disc;
+      padding-left: 1rem; 
+    }
+    table td {
+      padding: .5rem 1rem;
+      vertical-align: top;
+    }
+
+    .mb
+    {
+      margin-bottom: .5rem;
     }
   </style>
 </head>
@@ -34,9 +70,61 @@
   <main>
     <section id="id_personal_info">
       <h2>Personal info</h2>
+      <ul>
+        <li>Aleksei Mitrofanov</li>
+        <li>St. Petersburg, Russia</li>
+        <li><b>Date of birth:</b> 07.04.1988</li>
+        <li><b>Email:</b> alexmitroff@gmail.com</li>
+        <li><b>Telegram:</b> @aka_alarm</li>
+        <li><b>Marital status:</b> married</li>
+        <li><b>Languages:</b>
+          <ul class="list">
+            <li>Russian – native</li>
+            <li>English – fluent</li>
+          </ul>
+        </li>
+      </ul>
     </section>
-    <section id="id_projects">
-      <h2>Projects</h2>
+    <section id="id_education">
+      <h2>Education</h2>
+      <table>
+        <tr>
+          <td>2010&nbsp;&ndash;&nbsp;2012</td>
+          <td>
+            <ul>
+              <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
+              <li>Engineering Graphics and Design</li>
+              <li class="mb"><b>Masters Degree Applied Information Technologies</b></li>
+              <li>Modules included: 3D animation, Post production and Compositing,
+              Java programming, 3D graphics programming.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>2006&nbsp;&ndash;&nbsp;2010</td>
+          <td>
+            <ul>
+              <li class="mb">Peter the Great St. Petersburg Polytechnic University</li>
+              <li>Engineering Graphics and Design</li>
+              <li class="mb"><b>Bachelor Degree Applied Information Technologies</b></li>
+              <li>Modules included: 3D modeling and animation, Database
+              engineering, Interactive multimedia development, Networking, OS
+              and telecommunication engineering, Object-oriented programming.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section id="id_tech_skills">
+      <h2>Technical skills</h2>
+      <ul class="list">
+        <li>Programming languages: python, c#, pascal</li>
+        <li>Web: django, django rest framework, postgresql, uwsgi, gunicorn, jinja2</li>
+        <li>Docker & setup CI/CD for Gitlab</li>
+        <li>Interactive 3D: Unity, UE4</li>
+        <li>OS: Any debian-based linux, windows</li>
+        <li>Addition software: Gimp, Inkscape, Blender, Adobe Photoshop, Illustrator, InDesign, Premiere Pro, After Effects</li>
+      </ul>
     </section>
   </main>
   <footer></footer>
