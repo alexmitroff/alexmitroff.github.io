@@ -79,6 +79,22 @@
     header > nav a:hover {
       color: hsl(0, 0%, 50%);
     }
+    figure{
+      margin-right: 2rem;
+    }
+    figure > img {
+      display: block;
+      width: 10rem;
+      height: 10rem;
+    }
+    #id_personal_info
+    {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #id_personal_info > h2 {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -97,6 +113,9 @@
   <main>
     <section id="id_personal_info">
       <h2>Personal info</h2>
+      <figure>
+        <img src="./static/alexmitroff.png" class="photo" alt="Aleksei Mitrofanov photo">
+      </figure>
       <ul>
         <li>Aleksei Mitrofanov</li>
         <li>St. Petersburg, Russia</li>
@@ -140,7 +159,9 @@
       <h2>Technical skills</h2>
       <ul class="list">
         <li>Programming languages: python, c#, pascal</li>
-        <li>Web: django, django rest framework, postgresql, uwsgi, gunicorn, jinja2</li>
+        <li>Web: django, django rest framework,
+          postgresql, uwsgi,
+          gunicorn, jinja2, pytest</li>
         <li>Docker & setup CI/CD for Gitlab</li>
         <li>Interactive 3D: Unity, UE4</li>
         <li>OS: Any debian-based linux, windows</li>
@@ -151,11 +172,11 @@
       <h2>Projects</h2>
       <ul class="list">
         <li class="mb"><b>5minutemondays.com</b> A platform for online OSHA trainings. Clinet registration, integration with Stripe payment service, integration with AWS SMS, 
-          integration with Vimeo, generating posttraining reports as PDF. Django, django rest framework, postgresql, gUnicorn, fabric for CI/CD.</li>
+          integration with Vimeo, generating posttraining reports as PDF. Django, postgresql, gUnicorn, pytest, fabric for CI/CD.</li>
 
         <li class="mb"><b>magistra-school.ru</b> A platform for massage school.
         Schedule, student regstration, application to courses, integration with payment services,
-        integration with Vimeo(online course storage during COVID-19 lockdown). Django, django rest framework, postgresql, gUnicorn, docker</li>
+        integration with Vimeo(online course storage during COVID-19 lockdown). Django, django rest framework, postgresql, gUnicorn, docker, pytest</li>
 
         <li class="mb"><b>3D visualization for track driver training system.</b> Visualization of terain with 4 different tracks.
           A suspention calculations for a hexopod platform, intagration with rest of the training system written in Delphi. Unity, C#</li>
@@ -206,17 +227,24 @@
       <h3>February 2020 -
         until now</h3>
       <div>
-        <b>Unity C# developer at "NTC-KT "TOR"</b>
+        <b>3D generalist and Unity C# developer at "NTC-KT "TOR"</b>
+        <p>I as part of the team responsible for the training system software. I created an 3D application to visualize a state of training systems.
+          Also I responsible for administration of selfhosted gitea server</p>
       </div>
       <h3>August 2019 -
-        February 2020</h3>
+        until now</h3>
       <div>
         <b>Freelance</b>
+        <p>Fullstack dev (single developer) on 5minutemondays.com except deployment scripts. CI/CD was made before I joined the project. Django, postgresql, gUnicorn, pytest. Linux server administration.</p>
+        <p>Fullstack dev (single developer) on magistra-school.ru. Django, postgresql, gUnicorn, pytest, docker (Gitlab CI/CD). Linux server administration.</p>
       </div>
       <h3>December 2018 -
         August 2019</h3>
       <div>
         <b>Backend developer at amlab.me</b>
+        <p>I was responsible for event aggregation platform rocket.me. 
+          After rocker.me was posponed I was transfered to develop main amlab platform.
+          There I was responsible for custom CSS framework written with SASS and general backend staff.</p>
       </div>      
       <h3>September 2015 -
         December 2018</h3>
